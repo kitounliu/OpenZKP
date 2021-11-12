@@ -40,6 +40,7 @@ proptest = "0.9.4"
 rand = "0.7.2"
 rand_xoshiro = "0.4.0"
 structopt = "0.3.5"
+rand_core = { version = "0.6.3", features = ["getrandom"] }
 zkp-criterion-utils = { version = "0.2.0", path = "../../utils/criterion-utils" }
 zkp-elliptic-curve = { version = "0.2.0", path = "../../algebra/elliptic-curve" }
 zkp-elliptic-curve-crypto = { version = "0.2.0", path = "../../crypto/elliptic-curve-crypto" }
@@ -50,6 +51,11 @@ zkp-u256 = { version = "0.2.0", path = "../../algebra/u256", features = ["propte
 [[bench]]
 name = "benchmark"
 harness = false
+
+[[bench]]
+name = "bench_ecdsa"
+harness = false
+
 
 [features]
 default = [

@@ -658,7 +658,7 @@ fn oods_combine(
     // Fetch the oods sampling point
     let trace_length = trace_polynomials[0].len();
     let oods_point: FieldElement = proof.get_random();
-    dbg!(oods_point.clone());
+    trace!("{:?}", oods_point.clone());
     let g = FieldElement::root(trace_length).expect("No root for trace polynomial length.");
 
     // Write point evaluations to proof
@@ -676,7 +676,7 @@ fn oods_combine(
         // dbg!(oods_value);
         oods_value += oods_point.pow(i) * value;
     }
-    dbg!(oods_value);
+    trace!("{:?}", oods_value);
 
     // Divide out points and linear sum the polynomials
     // OPT: Parallelization

@@ -60,6 +60,8 @@ mod solidity_verifier;
 mod traits;
 mod verifier;
 
+pub mod ecdsa;
+
 // Optional prover functionality. Note that prover requires std.
 // TODO: Make it work without std.
 #[cfg(feature = "prover")]
